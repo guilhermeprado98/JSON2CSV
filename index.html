@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>JSON2CSV</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container my-5">
+      <h1 class="text-center mb-4">🧩 JSON2CSV</h1>
+
+      <div class="mb-3">
+         <label for="jsonInput" class="form-label">JSON de entrada</label>
+         <textarea id="jsonInput" class="form-control" rows="12" placeholder='Cole seu JSON aqui...'></textarea>
+      </div>
+
+      <div class="buttons d-flex gap-2 mb-3">
+         <button class="btn btn-primary" onclick="convertJsonToCsv()">Converter</button>
+         <button class="btn btn-secondary" onclick="clearFields()">Limpar</button>
+      </div>
+
+      <div id="message" class="alert d-none" role="alert"></div>
+
+      <div class="mb-3">
+         <label for="csvOutput" class="form-label">CSV gerado</label>
+         <textarea id="csvOutput" class="form-control" rows="12" readonly></textarea>
+      </div>
+      <div class="mb-3">
+         <a id="downloadLink" class="btn btn-success d-none" download="dados.csv">Baixar CSV</a>
+      </div>
+
+      <div id="tableContainer" class="table-responsive"></div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
